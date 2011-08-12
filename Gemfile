@@ -29,3 +29,7 @@ gem 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+gem "nifty-generators", :group => :development
+gem "bcrypt-ruby", :require => "bcrypt"
+gem "mocha", :group => :test
