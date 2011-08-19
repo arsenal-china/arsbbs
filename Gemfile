@@ -31,5 +31,7 @@ gem 'sqlite3'
 # end
 
 gem "nifty-generators", :group => :development
-gem "bcrypt-ruby", :require => "bcrypt"
-gem "mocha", :group => :test
+gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'mocha', :group => :test
+
+gem "rails_code_qa"

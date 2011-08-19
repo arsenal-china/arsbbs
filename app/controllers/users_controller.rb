@@ -8,10 +8,15 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
-    if @user.save
-      session[:user_id] = @user.id
-      redirect_to root_url, :notice => "Thank you for signing up! You are now logged in."
+    if User.is_invited?(params[:invitation_code])
+      if @user.save
+        session[:user_id] = @user.id
+        redirect_to root_url, :notice => "Thank you for signing up! You are now logged in."
+      else
+        render :action => 'new'
+      end
     else
+      #flash.now[:alert] = "Bad invitation code."
       render :action => 'new'
     end
   end

@@ -2,4 +2,27 @@
 
 <p>Already have an account? <%= link_to "Log in", login_path %>.</p>
 
-<%= render 'form' %>
+<%= form_for @user do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= label_tag :invitation_code, "Invitation Code" %><br />
+    <%= text_field_tag :invitation_code %>
+  </p>
+  <p>
+    <%= f.label :email, "Email Address" %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, "Confirm Password" %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p>
+    <%= f.label :username, "Display Name" %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p><%= f.submit(@user.new_record? ? "Sign up" : "Update") %></p>
+<% end %>

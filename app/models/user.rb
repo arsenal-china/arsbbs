@@ -20,6 +20,10 @@ class User < ActiveRecord::Base
   def encrypt_password(pass)
     BCrypt::Engine.hash_secret(pass, password_salt)
   end
+  
+  def self.is_invited?(invitation_code)
+    return invitation_code == "alpha2004"
+  end
 
   private
 

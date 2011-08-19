@@ -71,15 +71,24 @@ class UserTest < ActiveSupport::TestCase
     assert_equal user, User.authenticate(user_att[:email], user_att[:password])
   end
 
-  test "should authenticate bad email" do
+  test "should not pass authentication with bad email" do
     User.delete_all
     user = User.create user_att
     assert_nil User.authenticate('bad@email-address.com', user_att[:password])
   end
 
-  test "should authenticate bad password" do
+  test "should not pass authentication with bad password" do
     User.delete_all
     user = User.create user_att
     assert_nil User.authenticate(user_att[:email], "bad_password")
   end
+  
+  test "should pass check with good invitation code" do
+    assert User.is_invited?('alpha2004')
+  end
+  
+  test "should not pass check with bad invitation code" do
+    assert !User.is_invited?('bad_code')
+  end
+  
 end
