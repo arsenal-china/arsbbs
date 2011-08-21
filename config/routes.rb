@@ -1,7 +1,8 @@
 Arsbbs::Application.routes.draw do
   
-  root :to => "home#index"
-  
+  root :to => 'alpha#index' # 'home#index' for release version
+
+  match 'home'          => 'home#index',        :as => :home
   match 'signup'        => 'users#new',         :as => :signup
   match 'profile/edit'  => 'users#edit',        :as => :edit_profile
   match 'login'         => 'sessions#new',      :as => :login
