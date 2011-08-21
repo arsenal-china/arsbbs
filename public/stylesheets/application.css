@@ -86,6 +86,11 @@ a {
   margin: 0;
 }
 
+#two_columns {
+  width: 830px;
+  margin: 0 auto;
+}
+
 #login_box {
   float: left;
 }

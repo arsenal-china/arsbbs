@@ -1,9 +1,11 @@
 <% hide_nav %>
 <% title t :site_title %>
 <p><%=t :underconst %></p>
-<div id="login_box">
-  <%= render 'sessions/login_form' %>
-</div>
-<div id="signup_box">
-  <%= render 'sessions/signup_form' %>
+<div id="two_columns">
+  <div id="login_box">
+    <%= render 'sessions/login_form' %>
+  </div>
+  <div id="signup_box">
+    <%= render 'sessions/signup_form' %>
+  </div>
 </div>
