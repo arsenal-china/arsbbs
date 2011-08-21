@@ -16,7 +16,7 @@ class UsersController < ApplicationController
         render :action => 'new'
       end
     else
-      #flash.now[:alert] = "Bad invitation code."
+      flash.now[:alert] = "Bad invitation code."
       render :action => 'new'
     end
   end
