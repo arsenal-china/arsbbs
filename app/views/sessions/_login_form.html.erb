@@ -1,7 +1,11 @@
 <%= form_tag sessions_path do %>
+  <div>
   <%= label_tag :email, t(:log_email), :class => :label %>
-  <%= text_field_tag :email, nil, :class => :textbox %><br />
+  <%= text_field_tag :email, nil, :class => :textbox %>
+  </div><div>
   <%= label_tag :password, t(:log_pass), :class => :label %>
-  <%= password_field_tag :password, nil, :class => :textbox %><br />
+  <%= password_field_tag :password, nil, :class => :textbox %>
+  </div><div>
   <%= submit_tag t(:login), :class => :button %>
+  </div>
 <% end %>
