@@ -1,0 +1,7 @@
+<div id="user_box">
+  <% if current_user %>
+    <%=t :logged_in_1 %><%= current_user.username %><%=t :logged_in_2 %><%= link_to t(:logout), logout_path %><%=t :logged_in_3 %>
+  <% else %>
+    <%=t :guest_1 %><%= link_to t(:signup), signup_path %><%=t :guest_2 %><%= link_to t(:login), login_path %><%=t :guest_3 %>
+  <% end %>
+</div>
