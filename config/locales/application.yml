@@ -12,6 +12,14 @@ zh-CN:
   logged_in_3: "]"
   email_address: "E-mail 地址"
   password: "登录密码"
+  username: "用户名"
+  log_email: "E-mail 地址："
+  log_pass: "登录密码："
+  reg_invit: "内测邀请码："
+  reg_email: "E-mail 地址："
+  reg_pass: "设定一个密码："
+  reg_conf: "确认密码："
+  reg_name: "设定一个用户名："
   underconst: "  阿森纳中国网新版本正在建设并内部测试中，欢迎在旧版论坛中提出意见和建议。新版系统的注册目前仅对开发人员开放。"
 
   activerecord:
