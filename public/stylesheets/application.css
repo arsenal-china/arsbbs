@@ -85,3 +85,38 @@ a {
 .error_messages ul {
   margin: 0;
 }
+
+.textbox {
+  margin: 3px 0;
+  padding: 8px;
+  font-size: 18pt;
+  width: 300px;
+  background-color: rgba(255,255,255,0.3);
+  border: solid 1px #977f42;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px 6px 6px 6px;
+  behavior: url(ie-css3.htc);
+}
+
+.textbox:hover {
+  background-color: rgba(255,255,255,0.7);
+}
+
+.button {
+  margin: 3px 0;
+  padding: 8px;
+  font-size: 18pt;
+  letter-spacing: 16px;
+  width: 318px;
+  background-color: rgba(151,127,66,0.3);
+  border: solid 1px #977f42;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px 6px 6px 6px;
+  behavior: url(ie-css3.htc);
+}
+
+.button:hover {
+  background-color: rgba(151,127,66,0.7);
+}
