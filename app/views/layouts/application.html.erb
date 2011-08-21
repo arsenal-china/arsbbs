@@ -11,9 +11,7 @@
   <body>
     <div id="container">
       <%= render 'layouts/user_box' %>
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
+      <%= render 'layouts/notice_box' %>
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
     </div>
