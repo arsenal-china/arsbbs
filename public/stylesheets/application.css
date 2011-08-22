@@ -19,7 +19,7 @@ a {
 }
 
 #container {
-  width: 75%;
+  width: 1000px;
   margin: 0 auto;
   background-color: rgba(240,255,255,0.8);
   padding: 20px 40px;
@@ -96,7 +96,7 @@ a {
 }
 
 #signup_box {
-  margin-left: 400px;
+  margin: 40px 0 20px 400px;
   padding-left : 50px;
   border-left: dotted 1px #977f42;
 }
