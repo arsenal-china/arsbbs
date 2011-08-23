@@ -1,7 +1,19 @@
+* {
+  font-family: "Lucida Grande", Helvetica, Verdana, Arial, STHeiTi, "Microsoft YaHei", SimSun, sans-serif;
+}
+
 body {
   background: url('/images/background.jpg') 50% -240px;
-  font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
+}
+
+h1{
+  font-size: 18pt;
+}
+
+p {
+  text-indent: 28px;
+  line-height: 20pt;
 }
 
 a img {
@@ -18,8 +30,16 @@ a {
   overflow: hidden;
 }
 
+#title_image {
+  width: 750px;
+  height: 180px;
+  background: url('/images/title.png');
+  margin: 0 auto;
+  margin-bottom: -20px;
+}
+
 #container {
-  width: 1000px;
+  width: 900px;
   margin: 0 auto;
   background-color: rgba(240,255,255,0.8);
   padding: 20px 40px;
