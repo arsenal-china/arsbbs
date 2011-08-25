@@ -113,11 +113,13 @@ a {
 
 #login_box {
   float: left;
+  padding: 2px 0 20px 0;
+  width: 350px;
 }
 
 #signup_box {
   margin: 40px 0 20px 400px;
-  padding-left : 50px;
+  padding: 1px 0 20px 50px;
   border-left: dotted 1px #977f42;
 }
 
