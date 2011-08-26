@@ -34,7 +34,7 @@ class UsersControllerTest < ActionController::TestCase
   
   test "should not get edit profile page if not logged in" do
     get :edit
-    assert_redirected_to login_url
+    assert_redirected_to alpha_url
   end
 
   test "should get edit profile page if logged in" do
@@ -46,7 +46,7 @@ class UsersControllerTest < ActionController::TestCase
 
   test "should not update profile without user id" do
     put :update, :id => "ignored"
-    assert_redirected_to login_url
+    assert_redirected_to alpha_url
   end
 
   test "should not update invalid profile" do

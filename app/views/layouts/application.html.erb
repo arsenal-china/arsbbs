@@ -12,7 +12,7 @@
     <div id="title_image"></div>
     <div id="container">
       <%= render 'layouts/user_box' if show_nav? %>
-      <%= render 'layouts/notice_box' if show_nav? %>
+      <%= render 'layouts/notice_box' %>
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
     </div>
