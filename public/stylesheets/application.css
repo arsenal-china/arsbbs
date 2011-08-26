@@ -8,11 +8,10 @@ body {
 }
 
 h1{
-  font-size: 18pt;
+  font-size: 24pt;
 }
 
 p {
-  text-indent: 28px;
   line-height: 20pt;
 }
 
@@ -84,6 +83,20 @@ a {
 #flash_error, #flash_alert {
   background-color: #FCC;
   border: solid 1px #C66;
+}
+
+.section_icon {
+  float: left;
+  width: 200px;
+  margin: -24px -10px -40px -40px;
+}
+
+.section_title {
+  font-size: 18pt;
+  margin-top: 30px;
+}
+
+.section_text {
 }
 
 .fieldWithErrors {
