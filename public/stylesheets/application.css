@@ -59,9 +59,21 @@ a {
   float: right;
 }
 
+#notice_box {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  text-align: center;
+}
+
 #flash_notice, #flash_error, #flash_alert {
   padding: 5px 8px;
-  margin: 10px 0;
+  margin: 0;
+  -webkit-border-radius: 0px 0px 16px 16px;
+  -moz-border-radius: 0px 0px 16px 16px;
+  border-radius: 0px 0px 16px 16px;
+  behavior: url('ie-css3.htc');
 }
 
 #flash_notice {
