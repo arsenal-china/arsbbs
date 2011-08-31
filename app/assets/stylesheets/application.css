@@ -1,9 +1,17 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+
 * {
   font-family: "Lucida Grande", Helvetica, Verdana, Arial, STHeiTi, "Microsoft YaHei", SimSun, sans-serif;
 }
 
 body {
-  background: url('/images/background.jpg') 50% -240px;
+  background: url('/assets/background.jpg') 50% -240px;
   font-size: 14px;
 }
 
@@ -32,7 +40,7 @@ a {
 #title_image {
   width: 750px;
   height: 180px;
-  background: url('/images/title.png');
+  background: url('/assets/title.png');
   margin: 0 auto;
   margin-bottom: -20px;
 }
