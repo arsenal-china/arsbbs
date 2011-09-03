@@ -13,7 +13,6 @@ gem 'uglifier'
 # Rails 3.1 - JavaScript
 gem 'jquery-rails'
 # Rails 3.1 - Heroku
-# Rails 3.1 - Heroku
 group :production do
   gem 'therubyracer-heroku', '0.8.1.pre3'
   gem 'pg'
