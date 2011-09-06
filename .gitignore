@@ -5,4 +5,5 @@ log/*.log
 tmp/
 tmp/**/*
 config/database.yml
+coverage/
 .sass-cache/
