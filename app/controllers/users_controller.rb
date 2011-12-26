@@ -13,11 +13,11 @@ class UsersController < ApplicationController
         session[:user_id] = @user.id
         redirect_to home_url, :notice => t(:signed_up)
       else
-        render :action => 'new'
+        render :template => "alpha/index"
       end
     else
       flash.now[:alert] = t(:bad_invitation_code)
-      render :action => 'new'
+      render :template => "alpha/index"
     end
   end
 

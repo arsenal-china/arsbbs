@@ -15,13 +15,13 @@ class UsersControllerTest < ActionController::TestCase
   test "should go back to signup page if signup fails" do
     User.any_instance.stubs(:valid?).returns(false)
     post :create, :invitation_code => invitation_code
-    assert_template :new
+    assert_template "alpha/index"
   end
 
   test "should go back to signup page with bad invitation code" do
     User.any_instance.stubs(:valid?).returns(true)
     post :create, :invitation_code => "bad_code"
-    assert_template :new
+    assert_template "alpha/index"
     assert_equal I18n.t(:bad_invitation_code), flash[:alert]
   end
 
