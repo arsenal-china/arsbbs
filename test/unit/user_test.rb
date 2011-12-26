@@ -9,6 +9,10 @@ class UserTest < ActiveSupport::TestCase
     attributes[:password_confirmation] ||= attributes[:password]
     attributes
   end
+  
+  def trans_err(error)
+    [I18n.t('activerecord.errors.models.user.attributes.' + error)]
+  end
 
   test "should validate and create user" do
     user = User.new user_att
@@ -21,42 +25,42 @@ class UserTest < ActiveSupport::TestCase
   test "should validate uniqueness of email" do
     user1 = User.create user_att
     user2 = User.create user_att
-    assert_equal ["has already been taken"], user2.errors[:email]
+    assert_equal trans_err('email.taken'), user2.errors[:email]
   end
 
   test "should fail validation with email address in wrong format" do
     user = User.create user_att :email => 'wrong@format@email-address.com'
-    assert_equal ["is invalid"], user.errors[:email]
+    assert_equal trans_err('email.invalid'), user.errors[:email]
   end
 
   test "should not create user without password" do
     assert_difference "User.count", 0, "user count should not increase" do
       user = User.create user_att :password => ''
-      assert_equal ["can't be blank"], user.errors[:password]
+      assert_equal trans_err('password.blank'), user.errors[:password]
     end
   end
 
   test "should not create user without username" do
     assert_difference "User.count", 0, "user count should not increase" do
       user = User.create user_att :username => ''
-      assert_equal ["can't be blank"], user.errors[:username]
+      assert_equal trans_err('username.blank'), user.errors[:username]
     end
   end
 
   test "should validate uniqueness of username" do
     user1 = User.create user_att
     user2 = User.create user_att
-    assert_equal ["has already been taken"], user2.errors[:username]
+    assert_equal trans_err('username.taken'), user2.errors[:username]
   end
 
   test "should validate length of password" do
     user = User.create user_att :password => '1234567'
-    assert_equal ["is too short (minimum is 8 characters)"], user.errors[:password]
+    assert_equal trans_err('password.too_short'), user.errors[:password]
   end
 
   test "should require matching password confirmation" do
     user = User.create user_att :password_confirmation => 'non-matching-password'
-    assert_equal ["doesn't match confirmation"], user.errors[:password]
+    assert_equal trans_err('password.confirmation'), user.errors[:password]
   end
   
   test "should generate password hash and salt on create" do

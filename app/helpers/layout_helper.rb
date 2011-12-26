@@ -7,9 +7,17 @@ module LayoutHelper
     content_for(:title) { h(page_title.to_s) }
     @show_title = show_title
   end
-
+  
   def show_title?
     @show_title
+  end
+  
+  def hide_nav
+    @hide_nav = true
+  end
+
+  def show_nav?
+    !@hide_nav
   end
 
   def stylesheet(*args)

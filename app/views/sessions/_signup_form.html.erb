@@ -1,0 +1,20 @@
+<%= form_for @user do |f| %>
+  <div>
+  <%= label_tag :invitation_code, t(:reg_invit), :class => :label %>
+  <%= text_field_tag :invitation_code, nil, :class => :textbox %>
+  </div><div>
+  <%= f.label :email, t(:reg_email), :class => :label %>
+  <%= f.text_field :email, :class => :textbox %>
+  </div><div>
+  <%= f.label :password, t(:reg_pass), :class => :label %>
+  <%= f.password_field :password, :class => :textbox %>
+  </div><div>
+  <%= f.label :password_confirmation, t(:reg_conf), :class => :label %>
+  <%= f.password_field :password_confirmation, :class => :textbox %>
+  </div><div>
+  <%= f.label :username, t(:reg_name), :class => :label %>
+  <%= f.text_field :username, :class => :textbox %>
+  </div><div>
+  <%= f.submit t(:signup), :class => :button %>
+  </div>
+<% end %>

@@ -11,13 +11,13 @@ class UsersController < ApplicationController
     if User.is_invited?(params[:invitation_code])
       if @user.save
         session[:user_id] = @user.id
-        redirect_to root_url, :notice => "Thank you for signing up! You are now logged in."
+        redirect_to home_url, :notice => t(:signed_up)
       else
-        render :action => 'new'
+        redirect_to alpha_url, :alert => @user.errors.full_messages.join("；") + "。"
+        # TODO: Need a more friendly error message here.
       end
     else
-      #flash.now[:alert] = "Bad invitation code."
-      render :action => 'new'
+      redirect_to alpha_url, :alert => t(:bad_invitation_code)
     end
   end
 
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update_attributes(params[:user])
-      redirect_to root_url, :notice => "Your profile has been updated."
+      redirect_to home_url, :notice => t(:profile_updated)
     else
       render :action => 'edit'
     end

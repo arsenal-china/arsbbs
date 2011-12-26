@@ -5,7 +5,7 @@
     <%= f.text_field :username %>
   </p>
   <p>
-    <%= f.label :email, "Email Address" %><br />
+    <%= f.label :email %><br />
     <%= f.text_field :email %>
   </p>
   <p>
@@ -13,8 +13,8 @@
     <%= f.password_field :password %>
   </p>
   <p>
-    <%= f.label :password_confirmation, "Confirm Password" %><br />
+    <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %>
   </p>
-  <p><%= f.submit(@user.new_record? ? "Sign up" : "Update") %></p>
+  <p><%= f.submit(@user.new_record? ? t(:signup) : t(:save)) %></p>
 <% end %>
