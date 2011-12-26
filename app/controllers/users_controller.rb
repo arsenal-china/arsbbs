@@ -13,11 +13,11 @@ class UsersController < ApplicationController
         session[:user_id] = @user.id
         redirect_to home_url, :notice => t(:signed_up)
       else
-        render :template => "alpha/index"
+        redirect_to alpha_url, :alert => @user.errors.full_messages.join("；") + "。"
+        # TODO: Need a more friendly error message here.
       end
     else
-      flash.now[:alert] = t(:bad_invitation_code)
-      render :template => "alpha/index"
+      redirect_to alpha_url, :alert => t(:bad_invitation_code)
     end
   end
 

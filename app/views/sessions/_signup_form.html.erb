@@ -1,7 +1,5 @@
 <%= form_for @user do |f| %>
   <div>
-  <%= f.error_messages %>
-  </div><div>
   <%= label_tag :invitation_code, t(:reg_invit), :class => :label %>
   <%= text_field_tag :invitation_code, nil, :class => :textbox %>
   </div><div>
