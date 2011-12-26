@@ -60,7 +60,7 @@ class UsersControllerTest < ActionController::TestCase
     @controller.stubs(:current_user).returns(User.first)
     User.any_instance.stubs(:valid?).returns(true)
     put :update, :id => "ignored"
-    assert_redirected_to root_url
+    assert_redirected_to home_url
     assert_not_nil flash[:notice]
   end
 end
