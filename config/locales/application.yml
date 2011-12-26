@@ -4,6 +4,7 @@ zh-CN:
   login: "登录"
   logout: "退出"
   signup: "注册"
+  save: "保存"
   guest_1: "您现在的身份为“游客”，请 "
   guest_2: " 或 "
   guest_3: "。"
@@ -33,6 +34,7 @@ zh-CN:
   logged_out: "您已经退出登陆。"
   signed_up: "注册成功，欢迎加入内测！"
   bad_invitation_code: "抱歉，内测邀请码不正确。"
+  update_profile: "更新个人资料"
   profile_updated: "您的个人资料已经更新。"
 
   activerecord:
@@ -42,6 +44,7 @@ zh-CN:
       user:
         email: "E-mail 地址"
         password: "密码"
+        password_confirmation: "确认密码"
         username: "用户名"
     errors:
       models:
