@@ -38,6 +38,14 @@ a {
   overflow: hidden;
 }
 
+hr.divider {
+  margin: 48px -41px;
+  width: 980px;
+  height: 1px;
+  background-color: #977f42;
+  border: solid 1px #cbbfa0;
+}
+
 #title_image {
   width: 750px;
   height: 180px;
