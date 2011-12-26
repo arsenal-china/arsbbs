@@ -22,14 +22,15 @@ class UsersControllerTest < ActionController::TestCase
     User.any_instance.stubs(:valid?).returns(true)
     post :create, :invitation_code => "bad_code"
     assert_template :new
+    assert_equal I18n.t(:bad_invitation_code), flash[:alert]
   end
 
   test "should redirect to home page and show notice if signup succeeds" do
     User.any_instance.stubs(:valid?).returns(true)
     post :create, :invitation_code => invitation_code
-    assert_redirected_to root_url
+    assert_redirected_to home_url
     assert_equal assigns[:user].id, session[:user_id]
-    assert_not_nil flash[:notice]
+    assert_equal I18n.t(:signed_up), flash[:notice]
   end
   
   test "should not get edit profile page if not logged in" do
@@ -61,6 +62,6 @@ class UsersControllerTest < ActionController::TestCase
     User.any_instance.stubs(:valid?).returns(true)
     put :update, :id => "ignored"
     assert_redirected_to home_url
-    assert_not_nil flash[:notice]
+    assert_equal I18n.t(:profile_updated), flash[:notice]
   end
 end
