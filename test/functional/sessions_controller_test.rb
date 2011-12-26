@@ -15,14 +15,14 @@ class SessionsControllerTest < ActionController::TestCase
     post :create
     assert_redirected_to home_url
     assert_equal User.first.id, session['user_id']
-    assert_not_nil flash[:notice]
+    assert_equal I18n.t(:logged_in), flash[:notice]
   end
   
   test "should log out" do
     get :destroy
     assert_redirected_to root_url
     assert_nil session['user_id']
-    assert_not_nil flash[:notice]
+    assert_equal I18n.t(:logged_out), flash[:notice]
   end
   
 end
