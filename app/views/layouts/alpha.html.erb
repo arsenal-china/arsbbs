@@ -16,5 +16,6 @@
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
     </div>
+    <%= render 'layouts/ie6' %>
   </body>
 </html>
