@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  topic_count: 1
+  post_count: 1
+
+two:
+  name: MyString
+  description: MyText
+  topic_count: 1
+  post_count: 1

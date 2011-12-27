@@ -1,5 +1,7 @@
 Arsbbs::Application.routes.draw do
   
+  resources :boards
+
   root :to => 'alpha#index' # 'home#index' for release version
 
   match 'home'          => 'home#index',        :as => :home

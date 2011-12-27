@@ -36,7 +36,7 @@ zh-CN:
   alpha_login_msg: "如果您已有内测账号，请在下方输入E-mail地址和密码，登录进入新系统进行测试。请注意，在内测期间，网站数据可能经常丢失或清空，重要内容请自行备份。"
   alpha_signup_msg: "如果您已获得内测邀请，请在下方设定E-mail地址、密码和用户名，注册生成一个内测账号。"
   ie6_title: "您的浏览器版本太低"
-  ie6_message: "很抱歉，网站需要较新版本浏览器的支持，如果您使用 Internet Explorer 6.0 和 7.0，页面的显示可能会发生错乱。为了获得正常的显示效果，请您使用 Google Chrome、Firefox、Opera 等现代浏览器，或者升级到 IE 8.0/9.0。"
+  ie6_message: "很抱歉，网站需要较新版本浏览器的支持，如果您使用 Internet Explorer 6.0 和 7.0，页面的显示可能会发生错乱。为了获得正常的显示效果，请您使用 Google Chrome、Firefox、Safari、Opera 等标准化浏览器，或者升级到 IE 8.0/9.0。"
   logged_in: "登录成功，欢迎回来。"
   logged_out: "您已经退出登陆。"
   signed_up: "注册成功，欢迎加入内测！"
