@@ -13,7 +13,7 @@
 
 body {
   background: url('/assets/background.jpg') 50% -240px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 h1{
@@ -109,11 +109,12 @@ hr.divider {
 }
 
 .section_title {
-  font-size: 18pt;
+  font-size: 17px;
   margin-top: 30px;
 }
 
 .section_text {
+  font-size: 13px;
 }
 
 .fieldWithErrors {
@@ -169,14 +170,14 @@ hr.divider {
   display: inline-block;
   width: 120px;
   padding-right: 8px;
-  font-size: 11pt;
+  font-size: 13px;
   text-align: right;
 }
 
 #login_box .textbox, #signup_box .textbox {
   margin: 3px 0;
   padding: 4px;
-  font-size: 11pt;
+  font-size: 13px;
   width: 200px;
   background-color: rgba(255,255,255,0.3);
   border: solid 1px #977f42;
@@ -193,7 +194,7 @@ hr.divider {
 #login_box .button, #signup_box .button {
   margin: 5px 0 3px 133px;
   padding: 4px;
-  font-size: 11pt;
+  font-size: 13px;
   width: 80px;
   background-color: rgba(151,127,66,0.3);
   border: solid 1px #977f42;
