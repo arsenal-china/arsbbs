@@ -27,6 +27,7 @@ class BoardsControllerTest < ActionController::TestCase
   test "should show board" do
     get :show, :id => @board.to_param
     assert_response :success
+    assert_not_nil assigns(:topics)
   end
 
   test "should get edit" do

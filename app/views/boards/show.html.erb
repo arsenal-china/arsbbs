@@ -10,5 +10,5 @@
 <p>
   <b><%= Board.human_attribute_name :post_count %><%=t :colon %></b><%= @board.post_count %>
 </p>
-<p><%=t :under_const %></p>
+<%= render "topics/list" %>
 <p><%= link_to t(:back_home), home_path %></p>

@@ -14,6 +14,7 @@ class BoardsController < ApplicationController
   # GET /boards/1.json
   def show
     @board = Board.find(params[:id])
+    @topics = @board.topic
 
     respond_to do |format|
       format.html # show.html.erb
