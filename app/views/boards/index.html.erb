@@ -1,29 +1,7 @@
-<h1>Listing boards</h1>
+<h1><%=t :admin_boards %></h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Topic count</th>
-    <th>Post count</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @boards.each do |board| %>
-  <tr>
-    <td><%= board.name %></td>
-    <td><%= board.description %></td>
-    <td><%= board.topic_count %></td>
-    <td><%= board.post_count %></td>
-    <td><%= link_to 'Show', board %></td>
-    <td><%= link_to 'Edit', edit_board_path(board) %></td>
-    <td><%= link_to 'Destroy', board, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<%= render "admin/boards" %>
 
 <br />
 
-<%= link_to 'New Board', new_board_path %>
+<%= link_to t(:add_board), new_board_path %>
