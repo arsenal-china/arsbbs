@@ -3,6 +3,7 @@
 one:
   name: MyString
   author_id: 1
+  board_id: 1
   description: MyText
   content: MyText
   reply_count: 1
@@ -12,6 +13,7 @@ one:
 two:
   name: MyString
   author_id: 1
+  board_id: 1
   description: MyText
   content: MyText
   reply_count: 1
