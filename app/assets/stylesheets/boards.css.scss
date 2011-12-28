@@ -1,0 +1,47 @@
+// Place all the styles related to the Boards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.board-list {
+  width: 100%;
+  border-collapse: collapse;
+  border: solid 1px #977f42;
+  th {
+  	background: rgba(203, 191, 160, 0.5);
+    border-bottom: solid 1px #977f42;
+  }
+  tr {
+    th, td {
+      padding: 8px 20px;
+      vertical-align: middle;
+      text-align: center;
+      min-width: 48px;
+    }
+    td.name {
+      min-width: 120px;
+    }
+    td.description {
+      text-align: left;
+    }
+    td.name-desc {
+      text-align: left;
+      .desc {
+        color: #666;
+      }
+    }
+  }
+  tr:nth-of-type(odd) {
+  	background: rgba(203, 191, 160, 0.5);
+  }
+  tr:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  a.board-link {
+    font-weight: bold;
+    color: #931717;
+    text-decoration: none;
+    &:hover {
+      background: rgba(203, 191, 160, 0.5);
+    }
+  }
+}

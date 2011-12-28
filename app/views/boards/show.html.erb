@@ -1,0 +1,14 @@
+<p>
+  <b><%= @board.name %></b>
+</p>
+<p>
+  <b><%= Board.human_attribute_name :description %><%=t :colon %></b><%= @board.description %>
+</p>
+<p>
+  <b><%= Board.human_attribute_name :topic_count %><%=t :colon %></b><%= @board.topic_count %>
+</p>
+<p>
+  <b><%= Board.human_attribute_name :post_count %><%=t :colon %></b><%= @board.post_count %>
+</p>
+<p><%=t :under_const %></p>
+<p><%= link_to t(:back_home), home_path %></p>
