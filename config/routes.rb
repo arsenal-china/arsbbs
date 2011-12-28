@@ -8,9 +8,9 @@ Arsbbs::Application.routes.draw do
   match '/'             => 'alpha#index',       :as => :alpha
   match 'signup'        => 'users#new',         :as => :signup
   match 'profile/edit'  => 'users#edit',        :as => :edit_profile
+  match 'proc_login'    => 'sessions#create',    :as => :proc_login
   match 'logout'        => 'sessions#destroy',  :as => :logout
 
-  resources :sessions
   resources :users
 
   # Sample resource route with options:

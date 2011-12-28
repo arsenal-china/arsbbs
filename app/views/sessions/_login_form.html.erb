@@ -1,4 +1,4 @@
-<%= form_tag sessions_path do %>
+<%= form_tag proc_login_path do %>
   <div>
   <%= label_tag :email, t(:log_email), :class => :label %>
   <%= text_field_tag :email, nil, :class => :textbox %>
