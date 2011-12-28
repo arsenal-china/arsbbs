@@ -68,6 +68,12 @@ zh-CN:
         description: "说明"
         topic_count: "主题数"
         post_count: "帖子数"
+      topic:
+        name: "标题"
+        description: "摘要"
+        author: "作者"
+        board: "所在版块"
+        last_replied_at: "最后回复时间"
     errors:
       models:
         user:

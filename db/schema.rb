@@ -10,13 +10,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111227060809) do
+ActiveRecord::Schema.define(:version => 20111228225229) do
 
   create_table "boards", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.integer  "topic_count"
     t.integer  "post_count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "topics", :force => true do |t|
+    t.string   "name"
+    t.integer  "author_id"
+    t.text     "description"
+    t.text     "content"
+    t.integer  "reply_count"
+    t.integer  "view_count"
+    t.datetime "last_replied_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
