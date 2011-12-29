@@ -57,6 +57,7 @@ zh-CN:
     models:
       user: "用户"
       board: "版块"
+      topic: "主题"
     attributes:
       user:
         email: "E-mail 地址"
@@ -73,6 +74,10 @@ zh-CN:
         description: "摘要"
         author: "作者"
         board: "所在版块"
+        reply_view_count: "回复/点击"
+        reply_count: "回复数"
+        view_count: "点击量"
+        last_replied: "最后回复"
         last_replied_at: "最后回复时间"
     errors:
       models:
