@@ -1,14 +1,12 @@
 <p>
-  <b><%= @board.name %></b>
+  <b><%= link_to t(:arsbbs), home_path %> &gt; <%= @board.name %></b>
 </p>
 <p>
   <b><%= Board.human_attribute_name :description %><%=t :colon %></b><%= @board.description %>
 </p>
 <p>
   <b><%= Board.human_attribute_name :topic_count %><%=t :colon %></b><%= @board.topic_count %>
-</p>
-<p>
+  &nbsp;
   <b><%= Board.human_attribute_name :post_count %><%=t :colon %></b><%= @board.post_count %>
 </p>
 <%= render "topics/list" %>
-<p><%= link_to t(:back_home), home_path %></p>

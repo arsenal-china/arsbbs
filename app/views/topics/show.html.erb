@@ -1,40 +1,17 @@
-<p id="notice"><%= notice %></p>
+<p>
+  <b><%= link_to t(:arsbbs), home_path %> &gt; <%= link_to @topic.board.name, @topic.board %> &gt; <%= @topic.name %></b>
+</p>
+
+<h2>
+  <b><%= @topic.name %></b>
+</h2>
 
 <p>
-  <b>Name:</b>
-  <%= @topic.name %>
+  By <%= link_to @topic.author.username, @topic.author %>
 </p>
 
 <p>
-  <b>Author:</b>
-  <%= @topic.author_id %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @topic.description %>
-</p>
-
-<p>
-  <b>Content:</b>
   <%= @topic.content %>
 </p>
 
-<p>
-  <b>Reply count:</b>
-  <%= @topic.reply_count %>
-</p>
 
-<p>
-  <b>View count:</b>
-  <%= @topic.view_count %>
-</p>
-
-<p>
-  <b>Last replied at:</b>
-  <%= @topic.last_replied_at %>
-</p>
-
-
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<%= link_to 'Back', topics_path %>
