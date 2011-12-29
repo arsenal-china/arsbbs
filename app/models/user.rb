@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   
+  has_many :topic, :foreign_key => "author_id"
+  
   attr_accessible :username, :email, :password, :password_confirmation
 
   attr_accessor :password

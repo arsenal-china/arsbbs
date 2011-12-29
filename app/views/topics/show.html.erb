@@ -1,0 +1,17 @@
+<p>
+  <b><%= link_to t(:arsbbs), home_path %> &gt; <%= link_to @topic.board.name, @topic.board %> &gt; <%= @topic.name %></b>
+</p>
+
+<h2>
+  <b><%= @topic.name %></b>
+</h2>
+
+<p>
+  By <%= link_to @topic.author.username, @topic.author %>
+</p>
+
+<p>
+  <%= @topic.content %>
+</p>
+
+

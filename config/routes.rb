@@ -1,5 +1,7 @@
 Arsbbs::Application.routes.draw do
   
+  resources :topics
+
   root :to => 'alpha#index'
 
   match 'home'          => 'home#index',        :as => :home

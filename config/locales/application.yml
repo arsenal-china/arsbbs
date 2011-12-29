@@ -44,6 +44,7 @@ zh-CN:
   update_profile: "更新个人资料"
   profile_updated: "您的个人资料已经更新。"
   back_home: "返回首页"
+  back_to_board: "返回版块"
   admin_actions: "管理操作"
   admin_show: "查看"
   admin_edit: "编辑"
@@ -57,6 +58,7 @@ zh-CN:
     models:
       user: "用户"
       board: "版块"
+      topic: "主题"
     attributes:
       user:
         email: "E-mail 地址"
@@ -68,6 +70,16 @@ zh-CN:
         description: "说明"
         topic_count: "主题数"
         post_count: "帖子数"
+      topic:
+        name: "标题"
+        description: "摘要"
+        author: "作者"
+        board: "所在版块"
+        reply_view_count: "回复/点击"
+        reply_count: "回复数"
+        view_count: "点击量"
+        last_replied: "最后回复"
+        last_replied_at: "最后回复时间"
     errors:
       models:
         user:
