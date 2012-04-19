@@ -7,11 +7,11 @@
 </h2>
 
 <p>
-  By <%= link_to @topic.author.username, @topic.author %>
+  <%= t :posted_by %><%= link_to @topic.author.username, @topic.author %>
 </p>
 
-<p>
-  <%= @topic.content.html_safe %>
-</p>
+<div class="post-content">
+  <%= simple_format @topic.content %>
+</div>
 
 
