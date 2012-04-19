@@ -53,6 +53,7 @@ zh-CN:
   admin_boards: "编辑版块"
   add_board: "新建版块"
   colon: "："
+  posted_by: "作者/"
 
   activerecord:
     models:
