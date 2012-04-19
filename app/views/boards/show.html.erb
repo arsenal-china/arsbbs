@@ -1,6 +1,11 @@
 <div>
   <b><%= link_to t(:arsbbs), home_path %> &gt; <%= @board.name %></b>
 </div>
+
+<div class="board-buttons"><br /><br />
+  <%= link_to t(:create_topic), new_topic_path %>
+</div>
+
 <div>
   <br /><%= @board.description %><br />
   <%=t :total_count %> <b><%= @board.topic_count %></b> <%=t :measure_topic %><%= Topic.model_name.human %><%=t :comma %>
