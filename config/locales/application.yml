@@ -53,13 +53,18 @@ zh-CN:
   admin_boards: "编辑版块"
   add_board: "新建版块"
   colon: "："
-  posted_by: "作者/"
+  comma: "，"
+  authored_by: "作者/"
+  total_count: "共有"
+  measure_topic: "篇"
+  measure_post: "条"
 
   activerecord:
     models:
       user: "用户"
       board: "版块"
       topic: "主题"
+      post: "回复"
     attributes:
       user:
         email: "E-mail 地址"

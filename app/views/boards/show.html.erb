@@ -1,12 +1,9 @@
-<p>
+<div>
   <b><%= link_to t(:arsbbs), home_path %> &gt; <%= @board.name %></b>
-</p>
-<p>
-  <b><%= Board.human_attribute_name :description %><%=t :colon %></b><%= @board.description %>
-</p>
-<p>
-  <b><%= Board.human_attribute_name :topic_count %><%=t :colon %></b><%= @board.topic_count %>
-  &nbsp;
-  <b><%= Board.human_attribute_name :post_count %><%=t :colon %></b><%= @board.post_count %>
-</p>
+</div>
+<div>
+  <br /><%= @board.description %><br />
+  <%=t :total_count %> <b><%= @board.topic_count %></b> <%=t :measure_topic %><%= Topic.model_name.human %><%=t :comma %>
+   <b><%= @board.post_count %></b> <%=t :measure_post %>回复<br /><br />
+</div>
 <%= render "topics/list" %>
