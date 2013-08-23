@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= content_for?(:title) ? t(:site_title) + ' - ' + yield(:title) : t(:site_title) %></title>
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tag %>
-    <meta http-equiv="X-UA-Compatible" content="IE=9" />
-    <%= yield(:head) %>
-  </head>
-  <body>
-    <div id="title_image"></div>
-    <div id="container">
-      <%= render 'layouts/user_box' if show_nav? %>
-      <%= render 'layouts/notice_box' %>
-      <%= content_tag :h1, yield(:title) if show_title? %>
-      <%= yield %>
-    </div>
-  </body>
+<head>
+  <title>Arsbbs</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
 </html>
