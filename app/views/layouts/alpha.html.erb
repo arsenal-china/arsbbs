@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>阿森纳中国网 - 全球最大的阿森纳中文网站 - Arsenal.com.cn</title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tag %>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body>
+    <%= image_tag "alpha-banner.png", class: "alpha-banner" %>
+    <%= yield %>
+  </body>
+</html>

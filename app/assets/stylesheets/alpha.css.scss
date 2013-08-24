@@ -2,7 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Mixins
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+// Styles
+
 body {
   background-image: url(image_path("background.jpg"));
-  background-position: center -160px;
+  background-position: center -240px;
+}
+
+.alpha-banner {
+  display: block;
+  margin: 0 auto;
+}
+
+.alpha-container {
+  width: 760px;
+  height: 400px;
+  margin: 16px auto;
+  background-color: #fff;
+  opacity: 0.95;
+  @include box-shadow(0, 0, 80px, #000);
+  text-align: center;
+  padding-top: 140px;
 }
