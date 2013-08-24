@@ -16,6 +16,12 @@
   }
 }
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
 // Styles
 
 body {
@@ -29,12 +35,15 @@ body {
 }
 
 .alpha-container {
-  width: 760px;
-  height: 400px;
-  margin: 16px auto;
-  background-color: #fff;
-  opacity: 0.95;
-  @include box-shadow(0, 0, 80px, #000);
-  text-align: center;
-  padding-top: 140px;
+  width: 300px;
+  height: 200px;
+  margin: 400px auto 0 auto;
+  padding-left: 4px;
+  form {
+    .input-group {
+      margin: 16px 0;
+      @include border-radius(4px);
+      @include box-shadow(0, 0, 16px, #000);
+    }
+  }
 }
