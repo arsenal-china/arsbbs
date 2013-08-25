@@ -41,6 +41,9 @@ end
 # Heroku's Rail 4 solution
 gem 'rails_12factor', group: :production
 
+# Devise for authentication
+gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
