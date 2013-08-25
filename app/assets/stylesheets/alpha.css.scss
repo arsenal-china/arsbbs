@@ -24,26 +24,24 @@
 
 // Styles
 
-body {
+body.alpha-page {
   background-image: url(image_path("background.jpg"));
   background-position: center -240px;
-}
-
-.alpha-banner {
-  display: block;
-  margin: 0 auto;
-}
-
-.alpha-container {
-  width: 300px;
-  height: 200px;
-  margin: 400px auto 0 auto;
-  padding-left: 4px;
-  form {
-    .input-group {
-      margin: 16px 0;
-      @include border-radius(4px);
-      @include box-shadow(0, 0, 16px, #000);
+  .alpha-banner {
+    display: block;
+    margin: 0 auto;
+  }
+  .alpha-container {
+    width: 300px;
+    height: 200px;
+    margin: 350px auto 0 auto;
+    padding-left: 2px;
+    form {
+      .input-group {
+        margin: 16px 0;
+        @include border-radius(4px);
+        @include box-shadow(0, 0, 16px, #000);
+      }
     }
   }
 }
