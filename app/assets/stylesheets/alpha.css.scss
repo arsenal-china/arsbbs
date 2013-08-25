@@ -33,8 +33,7 @@ body.alpha-page {
   }
   .alpha-container {
     width: 300px;
-    height: 200px;
-    margin: 350px auto 0 auto;
+    margin: 390px auto 10px auto;
     padding-left: 2px;
     form {
       .input-group {
@@ -42,6 +41,20 @@ body.alpha-page {
         @include border-radius(4px);
         @include box-shadow(0, 0, 16px, #000);
       }
+    }
+  }
+  .alpha-notice {
+    width: 300px;
+    margin: 10px auto;
+    .notice, .alert {
+      padding: 0;
+      text-align: center;
+    }
+    .notice {
+      color: #9a9;
+    }
+    .alert {
+      color: #faa;
     }
   }
 }
